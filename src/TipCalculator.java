@@ -20,12 +20,11 @@ public class TipCalculator {
     }
 
     public void addMeal(double cost) {
-        this.cost = cost;
         while (cost != - 1) {
+            this.cost = cost;
             totalBillBeforeTip += cost;
-            System.out.println("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
+            System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             cost = scan.nextDouble();
-            System.out.println(totalBillBeforeTip);
         }
     }
 

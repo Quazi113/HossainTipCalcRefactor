@@ -12,7 +12,13 @@ public class TipCalculatorRunner {
         TipCalculator bill = new TipCalculator(people, tip);
         bill.addMeal(0.0);
 
-
+        System.out.println("--------------------------------");
+        System.out.println("Total Bill Before Tip: $" + bill.getTotalBillBeforeTip());
+        System.out.println("Tip Percentage: " + bill.getTipPercentage());
+        System.out.println("Total Tip: $" + bill.tipAmount());
+        System.out.println("Total Bill With Tip: $" + bill.totalBill());
+        System.out.println("Per Person Cost Before Tip: $" + bill.perPersonTipAmount());
+        System.out.println("Total Cost Per Person: $" + bill.perPersonTotalCost());
 
     }
 }
