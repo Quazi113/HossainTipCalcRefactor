@@ -25,15 +25,28 @@ public class TipCalculator {
             totalBillBeforeTip += cost;
             System.out.println("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             cost = scan.nextDouble();
+            System.out.println(totalBillBeforeTip);
         }
     }
 
     public double tipAmount() {
-        return String.format("%.2f", (tip / 100.0 * totalBillBeforeTip));
+        return tip / 100.0 * totalBillBeforeTip;
     }
 
     public double totalBill() {
         return tipAmount() + totalBillBeforeTip;
+    }
+
+    public double perPersonCostBeforeTip() {
+        return totalBillBeforeTip / people;
+    }
+
+    public double perPersonTipAmount() {
+        return tipAmount() / people;
+    }
+
+    public double perPersonTotalCost() {
+        return totalBill() / people;
     }
 
 }
